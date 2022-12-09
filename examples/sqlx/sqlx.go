@@ -32,8 +32,8 @@ func main() {
 		Lname:       "Ashling",
 		DateOfBirth: time.Date(1994, time.August, 14, 23, 51, 42, 0, time.UTC),
 		Email:       "lashling5@senate.gov",
-		Address:     "Male",
-		Gender:      "39 Kipling Pass",
+		Address:     "39 Kipling Pass",
+		Gender:      "Male",
 	}
 
 	//adding student record to table
