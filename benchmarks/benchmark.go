@@ -15,7 +15,7 @@ import (
 func init() {
 	var err error
 	// Opening a database connection.
-	db, err = sql.Open("mysql", "theuser:thepass@tcp(localhost:3306)/thedb?parseTime=true")
+	db, err = sql.Open("mysql", "theuser:thepass@tcp(localhost:3306)/thedb?multiStatements=true&parseTime=true")
 	if err != nil {
 		panic(err)
 	}
@@ -60,12 +60,12 @@ func setup()  {
 	//inserting records
 	_, err = db.Exec(records)
 	if err != nil {
-		return
+		panic(err)
 	}
 }
 
 func clear()  {
-	_, err := db.Exec(`DROP TABLE IF EXISTS students`)
+	_, err := db.Exec(`DROP TABLE IF EXISTS students;`)
 	if err != nil {
 		panic(err)
 	}
