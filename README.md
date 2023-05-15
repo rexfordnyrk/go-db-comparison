@@ -12,47 +12,46 @@ $ go test -run=XXX -bench=.
 
 below a result from the running of the benchmark
 ```
-================================== BENCHMARKING 1 RECORDS ====================================== 
+================================== BENCHMARKING 1 RECORDS ======================================
 goos: linux
 goarch: amd64
 pkg: github.com/rexfordnyrk/go-db-comparison/benchmarks
 cpu: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
-Benchmark/database/sql_limit:1_-8                  11128            105370 ns/op
-Benchmark/sqlx_limit:1_-8                          10000            111365 ns/op
-Benchmark/sqlc_limit:1_-8                          10000            108700 ns/op
-Benchmark/gorm_limit:1_-8                          16742             70535 ns/op
-================================================================================================
-================================== BENCHMARKING 10 RECORDS ====================================== 
-Benchmark/database/sql_limit:10_-8                  9727            108236 ns/op
-Benchmark/sqlx_limit:10_-8                          9043            116293 ns/op
-Benchmark/sqlc_limit:10_-8                         10000            113071 ns/op
-Benchmark/gorm_limit:10_-8                         16965             75148 ns/op
-================================================================================================
-================================== BENCHMARKING 100 RECORDS ====================================== 
-Benchmark/database/sql_limit:100_-8                10000            107338 ns/op
-Benchmark/sqlx_limit:100_-8                        10000            114617 ns/op
-Benchmark/sqlc_limit:100_-8                        10000            114440 ns/op
-Benchmark/gorm_limit:100_-8                        16810             71593 ns/op
-================================================================================================
-================================== BENCHMARKING 1000 RECORDS ====================================== 
-Benchmark/database/sql_limit:1000_-8               10000            111443 ns/op
-Benchmark/sqlx_limit:1000_-8                        9792            111644 ns/op
-Benchmark/sqlc_limit:1000_-8                       10000            114245 ns/op
-Benchmark/gorm_limit:1000_-8                       16417             71042 ns/op
-================================================================================================
-================================== BENCHMARKING 10000 RECORDS ====================================== 
-Benchmark/database/sql_limit:10000_-8              10000            106227 ns/op
-Benchmark/sqlx_limit:10000_-8                       9711            111548 ns/op
-Benchmark/sqlc_limit:10000_-8                      10000            113653 ns/op
-Benchmark/gorm_limit:10000_-8                      16928             74733 ns/op
-================================================================================================
-================================== BENCHMARKING 15000 RECORDS ====================================== 
-Benchmark/database/sql_limit:15000_-8              11377            108174 ns/op
-Benchmark/sqlx_limit:15000_-8                      10000            110007 ns/op
-Benchmark/sqlc_limit:15000_-8                       9697            107933 ns/op
-Benchmark/gorm_limit:15000_-8                      16348             73725 ns/op
-===================================================================================================
+Benchmark/Database/sql_limit:1_-8                   9054            124134 ns/op
+Benchmark/Sqlx_limit:1_-8                           8914            138792 ns/op
+Benchmark/Sqlc_limit:1_-8                           7954            147056 ns/op
+Benchmark/GORM_limit:1_-8                          13388             89251 ns/op
+=================================================================================================
+================================== BENCHMARKING 10 RECORDS ======================================
+Benchmark/Database/sql_limit:10_-8                  7576            157780 ns/op
+Benchmark/Sqlx_limit:10_-8                          4384            260402 ns/op
+Benchmark/Sqlc_limit:10_-8                          4183            256384 ns/op
+Benchmark/GORM_limit:10_-8                          9466            136556 ns/op
+=================================================================================================
+================================== BENCHMARKING 100 RECORDS ======================================
+Benchmark/Database/sql_limit:100_-8                 2521            427603 ns/op
+Benchmark/Sqlx_limit:100_-8                         2139            497755 ns/op
+Benchmark/Sqlc_limit:100_-8                         2838            456938 ns/op
+Benchmark/GORM_limit:100_-8                         1896            563539 ns/op
+=================================================================================================
+================================== BENCHMARKING 1000 RECORDS ======================================
+Benchmark/Database/sql_limit:1000_-8                 516           2201303 ns/op
+Benchmark/Sqlx_limit:1000_-8                         445           2786983 ns/op
+Benchmark/Sqlc_limit:1000_-8                         535           2313674 ns/op
+Benchmark/GORM_limit:1000_-8                         315           4186201 ns/op
+=================================================================================================
+================================== BENCHMARKING 10000 RECORDS ======================================
+Benchmark/Database/sql_limit:10000_-8                 51          21690323 ns/op
+Benchmark/Sqlx_limit:10000_-8                         38          28458473 ns/op
+Benchmark/Sqlc_limit:10000_-8                         55          21558300 ns/op
+Benchmark/GORM_limit:10000_-8                         28          40463924 ns/op
+=================================================================================================
+================================== BENCHMARKING 15000 RECORDS ======================================
+Benchmark/Database/sql_limit:15000_-8                 36          32048808 ns/op
+Benchmark/Sqlx_limit:15000_-8                         28          41484578 ns/op
+Benchmark/Sqlc_limit:15000_-8                         34          31680017 ns/op
+Benchmark/GORM_limit:15000_-8                         20          59348697 ns/op
+=================================================================================================
 PASS
-ok      github.com/rexfordnyrk/go-db-comparison/benchmarks      33.163s
-
+ok      github.com/rexfordnyrk/go-db-comparison/benchmarks      77.835s
 ```
